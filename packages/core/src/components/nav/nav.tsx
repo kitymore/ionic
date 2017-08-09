@@ -25,7 +25,7 @@ export class Nav {
 
   render() {
     if (this.pages.length === 0 && this.rootPage !== undefined) {
-      this.push(this.rootPage);
+      this.push(this.rootPage, {});
     }
     if (this.renderChildren) {
       this.renderChildren(this.element, this.push.bind(this), this.pop.bind(this), this.pages);
